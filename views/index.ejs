@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin="" />
+      <link rel="stylesheet" href="./styles/main.css">
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+      <script src="./scripts/index.js" type="module" defer></script>
+      <title>IP Address Tracker</title>
+</head>
+<body>
+      <section id="background">
+            <div id="banner"></div>
+            <div id="mapid" data-lat="<%= lat %>" data-lng="<%= lng %>"></div>
+      </section>
+      <section id="app">
+            <h1>IP Address Tracker</h1>
+            <form action="/" method="POST">
+                  <label for="input"></label>
+                  <input type="text" id="input" name="input" placeholder="0.255.0.255">
+                  <input type="submit" id="submit" value="">
+            </form>
+            <div id="info">
+                  <p id="ip-address"><%= ip %></p>
+                  <p id="location"><%= city %></p>
+                  <p id="timezone"><%= timezone %></p>
+                  <p id="isp"><%= isp %></p>
+            </div>
+      </section>
+</body>
+</html>
